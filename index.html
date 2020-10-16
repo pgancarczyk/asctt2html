@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+<meta charset="utf-8">
+<title>asctt2html</title>
+<script src="bundle.js"></script>
+
+<!-- asctt2html begin -->
+<div id="asctt">
+    <p>Ładowanie, czekaj...</p>
+</div>
+<style>
+    #asctt table {
+        max-width: 1000px;
+        border-collapse: collapse;
+        border: 1px solid black;
+        padding: 1vh 1vw;
+        table-layout: fixed;
+        margin: auto;
+    }
+    #asctt th, #asctt td {
+        height: 40px;
+        width: 12vw;
+        border: 1px solid black;
+        padding: 1vh 1vw;
+        text-align: center;
+    }
+    #asctt th:not(:first-child) {
+        border: 2px solid black;
+    }
+    #asctt td:first-child {
+        white-space: nowrap;
+    }
+    #asctt td span {
+        display: block;
+    }
+    #asctt td span span {
+        display: inline;
+        float: right;
+    }
+    #asctt .classroom {
+        text-align: left;
+        font-size: 0.8em;
+    }
+    #asctt .teacher {
+        font-size: 0.8em;
+    }
+    #asctt select {
+        font-size: 1.1em;
+        margin-bottom: 2vh  ;
+    }
+    #asctt a {
+        margin-left: 16px;
+    }
+    #asctt span.small {
+        font-size: 0.8em;
+    }
+    #asctt .printonly {
+        display: none;
+    }
+    @media print {
+        body * {
+            visibility: hidden;
+            overflow: hidden;
+        }
+        #asctt div, #asctt div * {
+            visibility: visible;
+        }
+        #asctt div {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #asctt table {
+            table-layout: auto;
+            width: 100%;
+        }
+        #asctt th, #asctt td {
+            height: 3vh;
+            padding: 4px;
+            font-size: 0.9em;
+
+        }
+        #asctt div p:first-child {
+            font-size: 0.9em;
+            color: black;
+        }
+        #asctt th:first-child, #asctt td:first-child {
+            width: 4vw;
+        }
+        #asctt .printonly {
+            display: inline;
+        }
+        body > table > tbody > tr:nth-child(4) > td > table > tbody > tr > td:nth-child(1) {
+            display: none;
+        }
+    }
+    #asctt-separator {
+        display: block;
+        border: 2px dashed red;
+    }
+    td.strona_c_z #asctt-separator {
+        display: none;
+    }
+</style>
+<script>
+
+</script>
+<div id="asctt-separator">Tekst pod planem należy umieścić poniżej tej ramki.</div>
+<!-- asctt2html end -->
+&nbsp;
